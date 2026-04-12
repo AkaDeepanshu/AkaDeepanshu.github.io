@@ -1,8 +1,9 @@
-import { CHAPTERS } from "@/constants/timeline";
-import { useScrollStore } from "@/hooks/useScrollStore";
+
 import { useFrame, useThree } from "@react-three/fiber";
 import { use, useRef } from "react";
 import * as THREE from "three";
+import { useScrollStore } from "../../hooks/useScrollStore";
+import { CHAPTERS } from "../../constants/timeline";
 
 export default function CameraRig() {
     const {camera} =   useThree();

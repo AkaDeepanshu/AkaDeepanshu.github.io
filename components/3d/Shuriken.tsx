@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 import { forwardRef, useRef } from "react";
 import { invalidate, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import useMouse from "@/hooks/useMouse";
+import useMouse from "../../hooks/useMouse";
 
 
 const Shuriken = forwardRef((props, ref: any) => {
@@ -18,16 +18,16 @@ const Shuriken = forwardRef((props, ref: any) => {
     useFrame(() => {
         if (!ref.current) return;
 
-        // Read GSAP's current value as base, add mouse offset on top
-        baseRotation.current.x = ref.current.rotation.x;
-        baseRotation.current.y = ref.current.rotation.y;
+        // // Read GSAP's current value as base, add mouse offset on top
+        // baseRotation.current.x = ref.current.rotation.x;
+        // baseRotation.current.y = ref.current.rotation.y;
 
-        ref.current.rotation.x +=
-            (mouse.current.y * 0.12 - ref.current.rotation.x + baseRotation.current.x) * 0.04;
-        ref.current.rotation.y +=
-            (mouse.current.x * 0.18 - ref.current.rotation.y + baseRotation.current.y) * 0.04;
+        // ref.current.rotation.x +=
+        //     (mouse.current.y * 0.12 - ref.current.rotation.x + baseRotation.current.x) * 0.04;
+        // ref.current.rotation.y +=
+        //     (mouse.current.x * 0.18 - ref.current.rotation.y + baseRotation.current.y) * 0.04;
 
-        invalidate();
+        // invalidate();
     });
  if (!model) return null;
 

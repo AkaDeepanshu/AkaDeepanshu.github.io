@@ -6,9 +6,9 @@ import Shuriken from "./Shuriken";
 import { Environment, Scroll } from "@react-three/drei";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useScrollStore } from "@/hooks/useScrollStore";
-import { CHAPTERS } from "@/constants/timeline";
 import CameraRig from "./CameraRig";
+import { useScrollStore } from "../../hooks/useScrollStore";
+import { CHAPTERS } from "../../constants/timeline";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,10 +63,12 @@ export default function Scene() {
     };
 
     return (
-        <div className="w-full h-screen fixed top-0 left-0 pointer-events-none z-0">
+        <div className="w-full h-screen fixed top-0 left-0 pointer-events-none" style={{zIndex:3}}>
             <Canvas
                 camera={{ position: [0, 0, 4], fov: 45 }}
                 frameloop="demand"
+                gl={{ alpha: true }}
+                style={{background: "transparent"}}
             >
                 <ambientLight intensity={0.4} />
                 <directionalLight position={[3, 3, 3]} intensity={1.5} />
