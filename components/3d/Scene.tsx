@@ -72,7 +72,7 @@ export default function Scene() {
             >
                 <ambientLight intensity={0.4} />
                 <directionalLight position={[3, 3, 3]} intensity={1.5} />
-                <directionalLight position={[-3, -2, -2]} intensity={0.8} color="#ff0000" />
+                <directionalLight position={[-3, -2, -2]} intensity={0.8} color="#f5c900" />
                 <Environment preset="city" />
                 <CameraRig />
                 <Suspense fallback={null}>
